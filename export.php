@@ -10,13 +10,15 @@
  * https://laravel.com/docs/5.8/collections
  */
 
- use Illuminate\Support;
+// use Illuminate\Support;
+use Tightenco\Collect\Support\Collection;
+use Zeald\Legacy\NBA2019\Controller;
 
 // prepare the request & process the arguments
 $database = 'nba2019';
-include('include/utils.php');
 require_once('vendor/autoload.php');
-require_once('classes/Controller.php');
+include('include/utils.php');
+//require_once('classes/Controller.php');
 
 // process the args
 $args = collect($_REQUEST);

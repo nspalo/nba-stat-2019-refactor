@@ -5,5 +5,14 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^7"
+    },
+    "autoload": {
+        "classmap": [
+            "include/"
+        ],
+        "psr-4": {
+            "Zeald\\Legacy\\NBA2019\\" : "classes/",
+            "Zeald\\NBA2019\\" : "zeald/"
+        }
     }
 }

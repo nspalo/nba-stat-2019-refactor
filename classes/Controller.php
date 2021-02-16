@@ -1,7 +1,13 @@
 <?php
-use Illuminate\Support;  // https://laravel.com/docs/5.8/collections - provides the collect methods & collections class
+
+namespace Zeald\Legacy\NBA2019;
+
+//use Illuminate\Support;  // https://laravel.com/docs/5.8/collections - provides the collect methods & collections class
+use Tightenco\Collect\Support\Collection;
 use LSS\Array2Xml;
-require_once('classes/Exporter.php');
+use Zeald\Legacy\NBA2019\Exporter;
+
+//require_once('classes/Exporter.php');
 
 class Controller {
 

@@ -1,5 +1,8 @@
 <?php
-use Illuminate\Support;
+namespace Zeald\Legacy\NBA2019;
+
+//use Illuminate\Support;
+use Tightenco\Collect\Support\Collection;
 use LSS\Array2Xml;
 
 // retrieves & formats data from the database for export

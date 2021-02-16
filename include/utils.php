@@ -1,7 +1,7 @@
 <?php
 
-require_once('vendor/autoload.php');
-use Illuminate\Support;
+//require_once('vendor/autoload.php');
+//use Illuminate\Support;
 
 // global connection object
 global $mysqli_db;
