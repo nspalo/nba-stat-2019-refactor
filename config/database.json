@@ -1,0 +1,10 @@
+{
+  "hostname":"localhost",
+  "username":"root",
+  "password":"root",
+  "database":"nba2019",
+  "errorLog" : {
+    "enable": false,
+    "logPath": "/logs/database-errors.log"
+  }
+}

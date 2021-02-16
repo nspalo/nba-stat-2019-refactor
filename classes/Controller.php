@@ -1,11 +1,11 @@
 <?php
 
-namespace Zeald\Legacy\NBA2019;
+namespace Zeald\Legacy\nba2019;
 
 //use Illuminate\Support;  // https://laravel.com/docs/5.8/collections - provides the collect methods & collections class
 use Tightenco\Collect\Support\Collection;
 use LSS\Array2Xml;
-use Zeald\Legacy\NBA2019\Exporter;
+use Zeald\Legacy\nba2019\Exporter;
 
 //require_once('classes/Exporter.php');
 

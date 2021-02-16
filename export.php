@@ -12,7 +12,8 @@
 
 // use Illuminate\Support;
 use Tightenco\Collect\Support\Collection;
-use Zeald\Legacy\NBA2019\Controller;
+use Zeald\Legacy\nba2019\Controller;
+use Zeald\nba2019\classes\database\Database;
 
 // prepare the request & process the arguments
 $database = 'nba2019';
