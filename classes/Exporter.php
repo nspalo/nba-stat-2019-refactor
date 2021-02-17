@@ -1,10 +1,21 @@
 <?php
-use Illuminate\Support;
+namespace Zeald\Legacy\nba2019;
+
+//use Illuminate\Support;
+use Tightenco\Collect\Support\Collection;
 use LSS\Array2Xml;
+use Zeald\nba2019\classes\database\Database;
 
 // retrieves & formats data from the database for export
 class Exporter {
+
+    /**
+     * @var Database
+     */
+    private $database;
+
     public function __construct() {
+        $this->database = new Database();
     }
 
     function getPlayerStats($search) {
@@ -20,7 +31,9 @@ class Exporter {
             FROM player_totals
                 INNER JOIN roster ON (roster.id = player_totals.player_id)
             WHERE $where";
-        $data = query($sql) ?: [];
+
+        $this->database->query($sql);
+        $data = $this->database->getRows() ?: [];
 
         // calculate totals
         foreach ($data as &$row) {
@@ -47,7 +60,11 @@ class Exporter {
             SELECT roster.*
             FROM roster
             WHERE $where";
-        return collect(query($sql))
+
+        $this->database->query($sql);
+        $data = $this->database->getRows() ?: [];
+
+        return collect($data)
             ->map(function($item, $key) {
                 unset($item['id']);
                 return $item;

@@ -1,11 +1,11 @@
 <?php
 
-require_once('vendor/autoload.php');
-use Illuminate\Support;
+//require_once('vendor/autoload.php');
+//use Illuminate\Support;
 
 // global connection object
-global $mysqli_db;
-$mysqli_db = new mysqli('localhost', 'root', 'root', $database ?: 'employees');
+//global $mysqli_db;
+//$mysqli_db = new mysqli('localhost', 'root', 'root', $database ?: 'employees');
 
 /**
  * Execute a query & return the resulting data as an array of assoc arrays
@@ -13,18 +13,18 @@ $mysqli_db = new mysqli('localhost', 'root', 'root', $database ?: 'employees');
  * @return boolean|array array of associative arrays - query results for select
  *     otherwise true or false for insert/update/delete success
  */
-function query($sql) {
-    global $mysqli_db;
-    $result = $mysqli_db->query($sql);
-    if (!is_object($result)) {
-        return $result;
-    }
-    $data = [];
-    while ($row = $result->fetch_assoc()) {
-        $data[] = $row;
-    }
-    return $data;
-}
+//function query($sql) {
+//    global $mysqli_db;
+//    $result = $mysqli_db->query($sql);
+//    if (!is_object($result)) {
+//        return $result;
+//    }
+//    $data = [];
+//    while ($row = $result->fetch_assoc()) {
+//        $data[] = $row;
+//    }
+//    return $data;
+//}
 
 /**
  * Debug method - dumps a print_r of any passed variables and exits
